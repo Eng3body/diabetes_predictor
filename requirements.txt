@@ -5,5 +5,6 @@ rich==13.9.4
 pickle-mixin
 scikit-learn==1.2.2
 streamlit==1.20.0
-numpy==1.23.5
-pandas==1.5.3
+numpy==1.26.0
+pandas
+joblib
