@@ -2,6 +2,11 @@ import streamlit as st
 import pickle
 import numpy as np
 import pandas as pd
+from joblib import dump, load
+
+
+
+
 
 # --- 1. Page Styling with Custom CSS ---
 st.markdown(
@@ -70,8 +75,9 @@ st.markdown(
 
 # --- 3. Load the Trained Model ---
 try:
-    with open("diabetes_model.pkl", "rb") as f:
-        model = pickle.load(f)
+    with open("diabetes_model.jobilb", "rb") as f:
+       # Load the model
+        model = load('diabetes_model.joblib')
     # Optional: remove attributes if your model has issues with unpickling certain attributes
     if hasattr(model, 'monotonic_cst'):
         del model.monotonic_cst
